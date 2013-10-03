@@ -2,18 +2,22 @@
   Create Proxy server 
 ###
 
+###############
+#  SETTINGS
+###############
+
 # check port proxy or run with  "coffee server.coffee -p 9000"
 $port = 9900
 $portStatic = 8081
+$staticPath = "/projects/n2o/n2o/n2o-ui/src/main/webapp"
 
 ###
   request -> proxy req
 ###
 options =
-  router: 
+  router:
     "localhost/n2o/app"   : "localhost:#{$portStatic}/app"
     "localhost/n2o"       : 'localhost:8080/n2o'
-
 
 
 ###############################
@@ -63,5 +67,5 @@ console.log "Start proxy on port: #{$port}"
 connect = require('connect')
 connect.createServer(
     connect.favicon(),
-    connect.static("/projects/n2o/n2o/n2o-ui/src/main/webapp")
+    connect.static($staticPath)
 ).listen($portStatic)
