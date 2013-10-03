@@ -14,5 +14,9 @@
     "debugging"
   ],
   "author": "zoh",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "http-proxy": "~0.10.3",
+    "connect": "~2.9.0"
+  }
 }
