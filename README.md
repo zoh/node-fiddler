@@ -27,7 +27,7 @@ This node-fiddler may redirect by routers table and replace responce (out file) 
     $staticPath = "/projects/n2o/n2o/n2o-ui/src/main/webapp"
 
 
-*Routers table*
+**Routers table**
 
     options =
       router:
@@ -41,7 +41,7 @@ and
 
 http://localhost:9900/n2o/data2  to req stat server ->  http://localhost:8080/n2o/data2
 
-*Patterns table*
+**Patterns table**
     
 this cfg in _config.coffee_
 check  req.url match by regString
@@ -57,8 +57,8 @@ One can edit "config.coffee" and not reinit  #  coffee server.coffee !
 
 # Install & Run proxy server
 
-    npm install
+    $ npm install
 
 install coffee-script
 
-    [sudo] coffee server.coffee   [-p 9000]
+    $ [sudo] coffee server.coffee   [-p 9000]
