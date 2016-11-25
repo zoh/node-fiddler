@@ -27,7 +27,7 @@ module.exports =
 
       if typeof $path is 'string'
         if $path and fs.existsSync($path)
-          res.setHeader 'Content-Type', $path
+          res.setHeader 'Content-Type', 'application/json'
           res.statusCode = 200
           res.write fs.readFileSync($path)
           console.log 'Load from cache: ' + req.url
@@ -46,5 +46,6 @@ module.exports =
     proxy.listen $port
     console.log "Start proxy on port: #{$port}"
 
-    connect = require('connect')
-    connect.createServer(connect.favicon(), connect.static($staticPath)).listen($portStatic)
+    if $staticPath
+      connect = require('connect')
+      wconnect.createServer(connect.favicon(), connect.static($staticPath)).listen($portStatic)

@@ -7,6 +7,14 @@
 
 
 patterns =
+  # 'api/inventory/lights/1/commands':
+  #   src: 'store/commands.json'
+  #   status: 200
+
+  '/api/directories/doctors/schedule\\?date=30.09.2016' : 'store/doctors.30.09.json'
+
+  '/api/directories/doctors/schedule\\?date=29.09.2016' : 'store/doctors.29.09.json'
+
   'none/': ''
   #"template/\\?pageId=Edit&containerId=patients": "/test/node-fiddler/store/EditPatients.html"
 

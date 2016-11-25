@@ -13,16 +13,11 @@ nodeFiddler = require './server'
 $portStatic = 8080
 
 options =
-  ws: true
   router:
     "localhost/api"              : "localhost:#{$portStatic}/api"
-    "localhost/ws"              : "localhost:#{$portStatic}/ws"
     "localhost/assets"            : "localhost:#{$portStatic}/assets"
-    "localhost/plugins"            : "localhost:#{$portStatic}/plugins"
     "localhost/index"            : "localhost:#{$portStatic}/index"
-    "localhost/isLogin"            : "localhost:#{$portStatic}/isLogin"
     "localhost/login"            : "localhost:#{$portStatic}/login"
-    "localhost/logout"            : "localhost:#{$portStatic}/logout"
     "localhost/"                 : "localhost:3000/"
 
 
